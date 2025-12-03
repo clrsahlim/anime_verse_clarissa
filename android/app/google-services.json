@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "641652231954",
+    "project_id": "lab-pemmob",
+    "storage_bucket": "lab-pemmob.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641652231954:android:073c5d1f1b45f7bb2dadcb",
+        "android_client_info": {
+          "package_name": "com.example.lab_pemmob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641652231954-cit27h8qf24mbl3171g9jnh1f961n1vs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lab_pemmob",
+            "certificate_hash": "4c28f0356f96e6275bd3e00639adac47968cad13"
+          }
+        },
+        {
+          "client_id": "641652231954-jv07kapnpbg1nvnpgq6ggnep7sftdo8k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lab_pemmob",
+            "certificate_hash": "d0ac0c27a7b3766ae6d8e08c7f5ef81b6cae14da"
+          }
+        },
+        {
+          "client_id": "641652231954-bo6542b2rth9t0i3e77s6k98qajknv8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByRUdFfMQ4QBpkLDvscUuX9Jo65uVPG9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641652231954-bo6542b2rth9t0i3e77s6k98qajknv8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

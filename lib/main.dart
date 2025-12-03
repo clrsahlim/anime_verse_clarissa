@@ -1,7 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:lab_pemmob/screens/signin_screen.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:lab_pemmob/config/routes.dart';
+import 'package:lab_pemmob/provider/app_state_provider.dart';
+import 'package:lab_pemmob/provider/auth_provider.dart';
+import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await GoogleSignIn.instance.initialize();
   runApp(const MyApp());
 }
 
@@ -10,13 +18,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Lab Pemmob',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AppStateProvider()),
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
+      ],
+      child: MaterialApp.router(
+        title: 'AnimeVerse',
+        theme: ThemeData(fontFamily: 'Urbanist'),
+        routerConfig: createRouter(),
+        debugShowCheckedModeBanner: false,
       ),
-      home: const SignInScreen(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -1,6 +1,6 @@
 import '../widgets/app_scaffold.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
@@ -9,14 +9,14 @@ import '../provider/auth_provider.dart';
 import '../utils/snackbar_helper.dart';
 import '../utils/validators.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   // Controllers
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -32,8 +32,8 @@ class _SignInScreenState extends State<SignInScreen> {
     super.dispose();
   }
 
-  /// Handle Sign In dengan Email & Password
-  Future<void> _handleSignIn() async {
+  /// Handle Sign Up dengan Email & Password
+  Future<void> _handleSignUp() async {
     // Validate inputs
     final email = _emailController.text.trim();
     final password = _passwordController.text;
@@ -56,7 +56,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
     // Call AuthProvider
     final authProvider = context.read<AuthProvider>();
-    final success = await authProvider.signInWithEmail(
+    final success = await authProvider.signUpWithEmail(
       email: email,
       password: password,
     );
@@ -69,12 +69,12 @@ class _SignInScreenState extends State<SignInScreen> {
     // Handle result
     if (success) {
       if (mounted) {
-        SnackbarHelper.showSuccess(context, 'Sign in berhasil!');
+        SnackbarHelper.showSuccess(context, 'Sign up berhasil!');
         context.go(AppRoutes.home);
       }
     } else {
       if (mounted) {
-        final errorMessage = authProvider.errorMessage ?? 'Sign in gagal';
+        final errorMessage = authProvider.errorMessage ?? 'Sign up gagal';
         SnackbarHelper.showError(context, errorMessage);
       }
     }
@@ -99,66 +99,6 @@ class _SignInScreenState extends State<SignInScreen> {
     } else {
       if (mounted) {
         final errorMessage = authProvider.errorMessage ?? 'Google Sign-In gagal';
-        SnackbarHelper.showError(context, errorMessage);
-      }
-    }
-  }
-
-  /// Handle Forgot Password
-  Future<void> _handleForgotPassword() async {
-    final email = _emailController.text.trim();
-
-    if (email.isEmpty) {
-      SnackbarHelper.showError(context, 'Masukkan email terlebih dahulu');
-      return;
-    }
-
-    final emailError = Validators.validateEmail(email);
-    if (emailError != null) {
-      SnackbarHelper.showError(context, emailError);
-      return;
-    }
-
-    // Show confirmation dialog
-    final confirmed = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Reset Password'),
-        content: Text('Kirim email reset password ke $email?'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: const Text('Batal'),
-          ),
-          TextButton(
-            onPressed: () => Navigator.pop(context, true),
-            child: const Text('Kirim'),
-          ),
-        ],
-      ),
-    );
-
-    if (confirmed != true) return;
-
-    setState(() => _isLoading = true);
-
-    final authProvider = context.read<AuthProvider>();
-    final success = await authProvider.sendPasswordResetEmail(email);
-
-    if (mounted) {
-      setState(() => _isLoading = false);
-    }
-
-    if (success) {
-      if (mounted) {
-        SnackbarHelper.showSuccess(
-          context,
-          'Email reset password telah dikirim!',
-        );
-      }
-    } else {
-      if (mounted) {
-        final errorMessage = authProvider.errorMessage ?? 'Gagal mengirim email';
         SnackbarHelper.showError(context, errorMessage);
       }
     }
@@ -189,9 +129,9 @@ class _SignInScreenState extends State<SignInScreen> {
 
                     SizedBox(height: screenHeight * 0.04),
 
-                    // Signin Title
+                    // Signup Title
                     Text(
-                      'Welcome Back!',
+                      'Join AnimeVerse!',
                       style: TextStyle(
                         fontSize: screenWidth * (isLargeScreen ? 0.06 : 0.1),
                         fontWeight: FontWeight.w800,
@@ -203,11 +143,11 @@ class _SignInScreenState extends State<SignInScreen> {
                     SizedBox(height: screenHeight * 0.01),
 
                     Text(
-                      'Sign in to continue your anime journey',
+                      'Create your account and start exploring',
                       style: TextStyle(
                         fontSize: screenWidth * 0.035,
-                        fontWeight: FontWeight.w500,
                         color: Colors.white70,
+                        fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -296,31 +236,14 @@ class _SignInScreenState extends State<SignInScreen> {
                       obscureText: _obscurePassword,
                     ),
 
-                    SizedBox(height: screenHeight * 0.01),
-
-                    // Forgot Password
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(
-                        onPressed: _isLoading ? null : _handleForgotPassword,
-                        child: Text(
-                          'Forgot Password?',
-                          style: TextStyle(
-                            fontSize: screenWidth * 0.035,
-                            color: Colors.blue.shade300,
-                          ),
-                        ),
-                      ),
-                    ),
-
                     SizedBox(height: screenHeight * 0.03),
 
-                    // Sign In Button
+                    // Sign Up Button
                     SizedBox(
                       width: double.infinity,
                       height: screenHeight * 0.075,
                       child: ElevatedButton(
-                          onPressed: _isLoading ? null : _handleSignIn,
+                          onPressed: _isLoading ? null : _handleSignUp,
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blue.withValues(alpha: 0.8),
                             foregroundColor: Colors.white,
@@ -339,7 +262,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             ),
                           )
                               : Text(
-                            'Sign In',
+                            'Sign Up',
                             style: TextStyle(
                               fontSize: screenWidth * 0.045,
                               fontWeight: FontWeight.w600,
@@ -380,7 +303,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                     SizedBox(height: screenHeight * 0.03),
 
-                    // Sign in with Google
+                    // Sign up with Google
                     SizedBox(
                       width: double.infinity,
                       height: screenHeight * 0.075,
@@ -424,12 +347,12 @@ class _SignInScreenState extends State<SignInScreen> {
 
                     SizedBox(height: screenHeight * 0.04),
 
-                    // Sign up link
+                    // Sign in link
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Don't have an account? ",
+                          'Already have an account? ',
                           style: TextStyle(
                             fontSize: screenWidth * 0.04,
                             color: Colors.white70,
@@ -437,10 +360,10 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                         TextButton(
                           onPressed: () {
-                            context.go(AppRoutes.signUp);
+                            context.go(AppRoutes.signIn);
                           },
                           child: Text(
-                            'Sign Up',
+                            'Sign In',
                             style: TextStyle(
                               fontSize: screenWidth * 0.04,
                               fontWeight: FontWeight.w600,
