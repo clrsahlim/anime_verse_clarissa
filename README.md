@@ -131,7 +131,6 @@ Think of it as your **personal anime library** in your pocket—always accessibl
 | **Framework** | Flutter 3.35.3 |
 | **Language** | Dart 3.9.2 |
 | **Backend** | Firebase (Firestore, Auth, Storage) |
-| **State Management** | Provider / Riverpod |
 | **Architecture** | Clean Architecture |
 | **Build Tools** | Gradle, Android SDK |
 | **CI/CD** | GitHub Actions |
