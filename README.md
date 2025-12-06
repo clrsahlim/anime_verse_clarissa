@@ -42,10 +42,12 @@ Think of it as your **personal anime library** in your pocket—always accessibl
 ## 📱 Screenshots
 
 <div align="center">
-  <img src="screenshots/home.png" width="200" alt="Home Screen"/>
-  <img src="screenshots/details.png" width="200" alt="Anime Details"/>
-  <img src="screenshots/library.png" width="200" alt="My Library"/>
-  <img src="screenshots/profile.png" width="200" alt="Profile"/>
+  <img src="screenshots/signup_screen.png" width="200" alt="Sign Up Screen"/>
+  <img src="screenshots/signin_screen.png" width="200" alt="Sign In Screen"/>
+  <img src="screenshots/home_screen.png" width="200" alt="Home Screen"/>
+  <img src="screenshots/detail_screen.png" width="200" alt="Anime Details"/>
+  <img src="screenshots/favorite_screen.png" width="200" alt="My Favorites"/>
+  <img src="screenshots/profile_screen.png" width="200" alt="Profile"/>
 </div>
 
 *Browse anime, view details, manage your library, and customize your profile—all with a beautiful interface.*
@@ -54,14 +56,10 @@ Think of it as your **personal anime library** in your pocket—always accessibl
 
 ## 🎥 Demo Aplikasi
 
-<div align="center">
+<div align="center"> [![Watch Demo Video](https://img.shields.io/badge/▶️_Watch_Demo-0066FF?style=for-the-badge)](https://drive.google.com/file/d/1vzjbKebgQqDQ6_SCsts5qDY_yO_clsMW/view?usp=drive_link)
+Lihat demo lengkap aplikasi
 
-[![Watch Demo Video](https://img.shields.io/badge/▶️_Watch_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-
-**Lihat demo lengkap aplikasi di YouTube**
-
-Atau klik link berikut:  
-🔗 [https://youtu.be/YOUR_VIDEO_ID](https://youtu.be/YOUR_VIDEO_ID)
+🔗 https://drive.google.com/file/d/1vzjbKebgQqDQ6_SCsts5qDY_yO_clsMW/view?usp=drive_link
 
 </div>
 
@@ -152,44 +150,12 @@ Atau klik link berikut:
 
 ---
 
-## 📂 Project Structure
-```
-lib/
-├── core/                  # Core functionality
-│   ├── constants/        # App constants
-│   ├── theme/           # App themes
-│   └── utils/           # Utility functions
-├── data/                 # Data layer
-│   ├── models/          # Data models
-│   ├── repositories/    # Repository implementations
-│   └── services/        # API & Firebase services
-├── presentation/         # UI layer
-│   ├── screens/         # App screens
-│   ├── widgets/         # Reusable widgets
-│   └── providers/       # State management
-└── main.dart            # Entry point
-
-android/
-├── app/
-│   ├── src/
-│   └── build.gradle     # Android build config
-└── gradle.properties    # Gradle properties
-
-.github/
-└── workflows/
-    └── build-release.yml # CI/CD workflow
-```
-
----
-
 ## 🙏 Acknowledgments
 
-- **Flutter Team** - For the amazing framework
-- **Firebase** - For powerful backend services
-- **Material Design** - For beautiful design guidelines
-- **Anime Community** - For inspiration and feedback
-- **Open Source Contributors** - For making this possible
-
+- **Bang Paldo** - For the guidance and mentorship throughout the semester
+- **Lab 3 Classmates** - For continuous support and collaboration
+- **IKLC Team** - For providing excellent learning materials and comprehensive teaching modules
+  
 ---
 
 ## 📞 Contact & Links
@@ -197,9 +163,7 @@ android/
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-clrsahlim-181717?style=for-the-badge&logo=github)](https://github.com/clrsahlim)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)
-[![Issues](https://img.shields.io/github/issues/clrsahlim/anime_verse_clarissa?style=for-the-badge)](https://github.com/clrsahlim/anime_verse_clarissa/issues)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:clarissahalim@students.usu.ac.id)
 
 </div>
 
