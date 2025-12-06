@@ -50,14 +50,13 @@ Think of it as your **personal anime library** in your pocket—always accessibl
   <img src="screenshots/profile_screen.png" width="200" alt="Profile"/>
 </div>
 
-*Browse anime, view details, manage your library, and customize your profile—all with a beautiful interface.*
+*Browse anime, view details, manage your favorite list, and customize your profile—all with a beautiful interface.*
 
 ---
 
 ## 🎥 Demo Aplikasi
 
-<div align="center"> [![Watch Demo Video](https://img.shields.io/badge/▶️_Watch_Demo-0066FF?style=for-the-badge)](https://drive.google.com/file/d/1vzjbKebgQqDQ6_SCsts5qDY_yO_clsMW/view?usp=drive_link)
-Lihat demo lengkap aplikasi
+<div align="center"> 
 
 🔗 https://drive.google.com/file/d/1vzjbKebgQqDQ6_SCsts5qDY_yO_clsMW/view?usp=drive_link
 
@@ -108,26 +107,17 @@ Lihat demo lengkap aplikasi
 1. Open the app and navigate to **Home** tab
 2. Scroll through featured and popular anime
 3. Use the **Search** icon to find specific titles
-4. Apply **Filters** to narrow down results
+4. Apply **Genre Filters** to narrow down results
 
-#### 📚 **Add to Your Library**
+#### 📚 **Add to Your Favorites**
 1. Find an anime you like
 2. Tap on the anime card to view details
-3. Tap the **Add to Library** button
-4. Select status: Watching, Plan to Watch, or Completed
-5. Your library syncs automatically to the cloud
-
-#### ⭐ **Rate and Review**
-1. Open an anime from your library
-2. Scroll to the **Rating** section
-3. Tap stars to rate (1-5)
-4. Add a personal note or review (optional)
-5. Save your rating
+3. Tap the **Favorite** button
+4. Your favorite anime pick listed automatically to the cloud
 
 #### 👤 **Manage Profile**
 1. Navigate to **Profile** tab
-2. Tap **Edit Profile**
-3. Update your display name, avatar, or bio
+3. Update your display name, avatar, or change your password
 4. Save changes
 
 ---
