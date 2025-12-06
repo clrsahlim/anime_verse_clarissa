@@ -2,14 +2,14 @@
 
 # 🎬 Anime Verse
 
-<img src="assets/app_icon.png" alt="Anime Verse Logo" width="200"/>
+<img src="assets/images/app_icon.png" alt="Anime Verse Logo" width="200"/>
 
 **Your Personal Anime Companion**  
 *Discover, Track, and Explore Your Favorite Anime in One Place*
 
 [![GitHub Release](https://img.shields.io/github/v/release/clrsahlim/anime_verse_clarissa?color=FF6B6B)](https://github.com/clrsahlim/anime_verse_clarissa/releases)
 
-[📥 Download](https://github.com/clrsahlim/anime_verse_clarissa/releases) • [🐛 Report Bug](https://github.com/clrsahlim/anime_verse_clarissa/issues) • [💡 Request Feature](https://github.com/clrsahlim/anime_verse_clarissa/issues)
+[📥 Download](https://github.com/clrsahlim/anime_verse_clarissa/releases)
 
 </div>
 
